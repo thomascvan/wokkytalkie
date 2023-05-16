@@ -1,4 +1,4 @@
-import { PROJECT_ID } from "@env"
+import { PROJECT_ID as projectId } from "@env"
 
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, View, Pressable, Text } from 'react-native';
@@ -7,8 +7,6 @@ import ChatList from './components/ChatList';
 import ChatView from './components/ChatView';
 
 import { Web3Modal, Web3Button, useWeb3Modal } from '@web3modal/react-native';
-
-const projectId = PROJECT_ID;
 
 const providerMetadata = {
   name: 'YOUR_PROJECT_NAME',
@@ -35,6 +33,9 @@ export default function App() {
         <Text>{isConnected ? 'View Account' : 'Connect'}</Text>
       </Pressable> */}
       <Web3Button />
+      <View>
+        <Text>{isConnected.toString()}</Text>
+      </View>
       <Web3Modal projectId={projectId} providerMetadata={providerMetadata}  />
       <View style={styles.topBarContainer}>
         <TopBar />
