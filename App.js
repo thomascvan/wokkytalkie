@@ -1,3 +1,5 @@
+import { PROJECT_ID } from "@env"
+
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, View, Pressable, Text } from 'react-native';
 import TopBar from './components/TopBar';
@@ -6,7 +8,7 @@ import ChatView from './components/ChatView';
 
 import { Web3Modal, Web3Button, useWeb3Modal } from '@web3modal/react-native';
 
-const projectId = '';
+const projectId = PROJECT_ID;
 
 const providerMetadata = {
   name: 'YOUR_PROJECT_NAME',
