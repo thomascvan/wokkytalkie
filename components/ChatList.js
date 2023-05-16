@@ -4,9 +4,9 @@ import ChatTile from './ChatTile';
 
 // Dummy conversation data
 const conversations = [
-  { id: '1', title: 'Chat 1', lastMessage: 'Last message 1' },
-  { id: '2', title: 'Chat 2', lastMessage: 'Last message 2' },
-  { id: '3', title: 'Chat 3', lastMessage: 'Last message 3' },
+  { id: '1', name: 'John Doe', lastMessage: 'Hey, how are you?' },
+  { id: '2', name: 'Jane Smith', lastMessage: 'Looking forward to the weekend!' },
+  { id: '3', name: 'Mike Johnson', lastMessage: `Let's meet for lunch tomorrow.` },
   // Add more conversation objects as needed
 ];
 

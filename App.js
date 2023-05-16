@@ -1,20 +1,32 @@
+import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import TopBar from './components/TopBar';
 import ChatList from './components/ChatList';
-// import { Web3Modal } from '@web3modal/react-native';
-
-const projectId = '';
+import ChatView from './components/ChatView';
 
 export default function App() {
+  const [selectedChat, setSelectedChat] = useState(null);
+
+  const handleChatClick = (chat) => {
+    setSelectedChat(chat);
+  };
+
+  const handleBackPress = () => {
+    setSelectedChat(null);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Web3Modal projectId={projectId} /> */}
       <View style={styles.topBarContainer}>
         <TopBar />
       </View>
-      <View style={styles.chatListContainer}>
-        <ChatList />
-      </View>
+      {selectedChat ? (
+        <ChatView chat={selectedChat} onBackPress={handleBackPress} />
+      ) : (
+        <View style={styles.chatListContainer}>
+          <ChatList onChatClick={handleChatClick} />
+        </View>
+      )}
     </SafeAreaView>
   );
 }

@@ -11,7 +11,7 @@ export default function ChatTile({ chat }) {
         />
       </View>
       <View style={styles.content}>
-        <Text style={styles.title}>{chat.title}</Text>
+        <Text style={styles.name}>{chat.name}</Text>
         <Text style={styles.message}>{chat.lastMessage}</Text>
       </View>
     </TouchableOpacity>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
   },
-  title: {
+  name: {
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 8,
