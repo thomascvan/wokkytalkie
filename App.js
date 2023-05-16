@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import TopBar from './components/TopBar';
+import ChatList from './components/ChatList';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.topBarContainer}>
+        <TopBar />
+      </View>
+      <View style={styles.chatListContainer}>
+        <ChatList />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  topBarContainer: {
+    height: 60, // Adjust the value as needed
+  },
+  chatListContainer: {
+    flex: 1,
   },
 });
