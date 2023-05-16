@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';``
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 export default function TopBar() {
   return (
     <View style={styles.container}>
       <View style={styles.leftSection}>
-        <MaterialIcons name="circle" size={24} color="#000" />
+        <MaterialIcons name="circle" size={35} color="#000" />
       </View>
       <View style={styles.centerSection}>
         <Text style={styles.title}>Chats</Text>
